@@ -1,0 +1,6 @@
+lib
+node_modules
+ganache.log
+defi_snapshot
+*.zip
+src/migrations/**/generated-wrappers
