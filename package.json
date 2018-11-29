@@ -1,6 +1,6 @@
 {
     "name": "defi-test-stack",
-    "version": "0.0.1-rc.1",
+    "version": "0.0.1-rc.2",
     "description": "DeFi Stack Environment",
     "main": "lib/src/index.js",
     "license": "MIT",
@@ -20,7 +20,7 @@
         "generate_snapshot": "yarn generate_contract_wrappers && yarn build && node ./lib/src/migrate.js && zip -r \"defi-snapshot-$(date +\"%Y-%m-%d\").zip\" defi_snapshot"
     },
     "config": {
-        "abis_global": "./artifacts/global/@(DummyERC20Token|DummyERC721Token|WETH9).json",
+        "abis_global": "./node_modules/@0x/contract-artifacts/artifacts/@(DummyERC20Token|DummyERC721Token|WETH9).json",
         "abis_0x": "./node_modules/@0x/contract-artifacts/artifacts/@(ERC20Proxy|ERC721Proxy|Exchange|Forwarder|OrderValidator).json",
         "abis_kyber": "./artifacts/kyber/@(KyberNetworkCrystal|KyberGenesisToken|KyberReserve|KyberNetworkProxy|ConversionRates|SanityRates|FeeBurner|WhiteList|KyberNetwork|ExpectedRate).json",
         "abi_gen_args": "--template ./contract_templates/contract.handlebars --partials ./contract_templates/partials/**/*.handlebars --backend ethers"

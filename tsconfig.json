@@ -3,7 +3,6 @@
         "outDir": "lib",
         "lib": ["es2017"],
         "skipLibCheck": true,
-        "sourceMap": true,
         "declaration": true,
         "noImplicitAny": true,
         "strictNullChecks": true,

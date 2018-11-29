@@ -2,7 +2,7 @@ import { BigNumber } from '@0x/utils';
 import { Web3Wrapper } from '@0x/web3-wrapper';
 import { Provider, TxData } from 'ethereum-types';
 
-import { artifacts as globalArtifacts } from '../../artifacts';
+import { artifacts as globalArtifacts } from '../../migrations/global/artifacts';
 import { DummyERC20TokenContract } from '../global/generated-wrappers/dummy_erc20_token';
 
 import { artifacts } from './artifacts';
@@ -93,6 +93,7 @@ export async function runMigrationsAsync(
     provider: Provider,
     txDefaults: Partial<TxData>,
 ): Promise<KyberContracts> {
+    console.log('Kyber');
     const web3Wrapper = new Web3Wrapper(provider);
     const addresses = await web3Wrapper.getAvailableAddressesAsync();
     const [admin, operator, alerter, reserveWallet, taxWallet] = addresses;

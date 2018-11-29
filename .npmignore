@@ -7,3 +7,6 @@ defi_snapshot/
 artifacts/
 contract_templates/
 *.zip
+lib/test
+ganache.log
+Dockerfile

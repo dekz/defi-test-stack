@@ -1,8 +1,6 @@
 import { ContractArtifact } from 'ethereum-types';
 
-import * as DummyERC20Token from '../artifacts/global/DummyERC20Token.json';
-import * as DummyERC721Token from '../artifacts/global/DummyERC721Token.json';
-import * as WETH9 from '../artifacts/global/WETH9.json';
+import { DummyERC20Token, DummyERC721Token, WETH9 } from '@0x/contract-artifacts';
 
 export const artifacts = {
     DummyERC20Token: (DummyERC20Token as any) as ContractArtifact,

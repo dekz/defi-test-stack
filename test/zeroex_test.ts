@@ -4,7 +4,7 @@ import { BigNumber } from '@0x/utils';
 import { Provider, Web3Wrapper } from '@0x/web3-wrapper';
 import * as chai from 'chai';
 
-import { artifacts as globalArtifacts } from '../src/artifacts';
+import { artifacts as globalArtifacts } from '../src/migrations/global/artifacts';
 import { DummyERC20TokenContract } from '../src/migrations/global/generated-wrappers/dummy_erc20_token';
 import { WETH9Contract } from '../src/migrations/global/generated-wrappers/weth9';
 import { artifacts } from '../src/migrations/zeroEx/artifacts';

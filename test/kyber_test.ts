@@ -2,7 +2,7 @@ import { BigNumber } from '@0x/utils';
 import { Web3Wrapper } from '@0x/web3-wrapper';
 import * as chai from 'chai';
 
-import { artifacts as globalArtifacts } from '../src/artifacts';
+import { artifacts as globalArtifacts } from '../src/migrations/global/artifacts';
 import { DummyERC20TokenContract } from '../src/migrations/global/generated-wrappers/dummy_erc20_token';
 import { artifacts } from '../src/migrations/kyber/artifacts';
 import { KyberNetworkProxyContract } from '../src/migrations/kyber/generated-wrappers/kyber_network_proxy';
