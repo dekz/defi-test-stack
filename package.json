@@ -21,18 +21,18 @@
     },
     "config": {
         "abis_global": "./artifacts/global/@(DummyERC20Token|DummyERC721Token|WETH9).json",
-        "abis_0x": "./artifacts/zeroEx/@(ERC20Proxy|ERC721Proxy|Exchange|Forwarder|OrderValidator).json",
+        "abis_0x": "./node_modules/@0x/contract-artifacts/artifacts/@(ERC20Proxy|ERC721Proxy|Exchange|Forwarder|OrderValidator).json",
         "abis_kyber": "./artifacts/kyber/@(KyberNetworkCrystal|KyberGenesisToken|KyberReserve|KyberNetworkProxy|ConversionRates|SanityRates|FeeBurner|WhiteList|KyberNetwork|ExpectedRate).json",
         "abi_gen_args": "--template ./contract_templates/contract.handlebars --partials ./contract_templates/partials/**/*.handlebars --backend ethers"
     },
     "dependencies": {
-        "@0x/order-utils": "^2.0.1",
-        "@0x/base-contract": "^3.0.3"
+        "@0x/base-contract": "^3.0.3",
+        "@0x/contract-artifacts": "^1.1.2",
+        "@0x/order-utils": "^3.0.1"
     },
     "devDependencies": {
         "@0x/abi-gen": "^1.0.15",
         "@0x/dev-utils": "^1.0.14",
-        "@0x/order-utils": "^2.0.1",
         "@0x/tslint-config": "^1.0.7",
         "@0x/typescript-typings": "^3.0.4",
         "@0x/utils": "^2.0.4",
@@ -46,13 +46,13 @@
         "dirty-chai": "^2.0.1",
         "ethereum-types": "^1.1.2",
         "ethers": "^4.0.10",
-        "ganache-cli": "^6.1.8",
+        "ganache-cli": "6.1.8",
         "lodash": "^4.17.11",
         "make-promises-safe": "^3.0.0",
         "mocha": "^5.2.0",
         "npm-run-all": "^4.1.2",
         "shx": "^0.2.2",
-        "tslint": "5.11.0",
-        "typescript": "3.0.1"
+        "tslint": "^5.11.0",
+        "typescript": "^3.0.1"
     }
 }
