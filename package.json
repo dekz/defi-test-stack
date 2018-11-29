@@ -8,7 +8,7 @@
         "lint": "tslint --format stylish --project . --exclude **/src/**/generated-wrappers/**/*",
         "build": "cross-env tsc",
         "ci": "yarn clean && yarn generate_contract_wrappers && yarn build && yarn test",
-        "clean": "shx rm -rf defi_snapshot lib src/**/generated-wrappers/*",
+        "clean": "shx rm -rf defi_snapshot lib src/**/generated-wrappers/* *.zip",
         "ganache-cli": "cross-env mkdir -p defi_snapshot && ganache-cli --gasLimit 10000000 --db defi_snapshot --noVMErrorsOnRPCResponse -p 8545 --networkId 50 -m \"concert load couple harbor equip island argue ramp clarify fence smart topic\"",
         "generate_contract_wrappers": "yarn wrappers:global && yarn wrappers:0x && yarn wrappers:kyber",
         "wrappers:global": "abi-gen --abis ${npm_package_config_abis_global} ${npm_package_config_abi_gen_args} --output src/migrations/global/generated-wrappers",
