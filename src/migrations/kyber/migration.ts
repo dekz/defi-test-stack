@@ -447,7 +447,7 @@ export async function runMigrationsAsync(
         );
     }
     // tslint:disable-next-line:custom-no-magic-numbers
-    const weiAmount = Web3Wrapper.toBaseUnitAmount(new BigNumber('50'), DECIMALS);
+    const weiAmount = Web3Wrapper.toBaseUnitAmount(new BigNumber('20'), DECIMALS);
     await web3Wrapper.awaitTransactionSuccessAsync(
         await web3Wrapper.sendTransactionAsync({ to: reserve.address, value: weiAmount, from: alerter }),
     );

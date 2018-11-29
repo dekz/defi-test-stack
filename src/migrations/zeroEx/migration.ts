@@ -54,7 +54,12 @@ export async function runMigrationsAsync(
     );
     const zrxAssetData = assetDataUtils.encodeERC20AssetData((zrxToken as any).address);
     const etherTokenAssetData = assetDataUtils.encodeERC20AssetData(contractAddresses.global.etherToken);
-    const exchange = await ExchangeContract.deployFrom0xArtifactAsync(artifacts.Exchange, provider, txDefaults);
+    const exchange = await ExchangeContract.deployFrom0xArtifactAsync(
+        artifacts.Exchange,
+        provider,
+        txDefaults,
+        zrxAssetData,
+    );
     await web3Wrapper.awaitTransactionSuccessAsync(
         await erc20Proxy.addAuthorizedAddress.sendTransactionAsync(exchange.address),
     );

@@ -1,0 +1,9 @@
+.*
+tsconfig.json
+tslint.json
+test/
+/src/
+defi_snapshot/
+artifacts/
+contract_templates/
+*.zip

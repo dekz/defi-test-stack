@@ -1,6 +1,6 @@
 {
     "name": "defi-test-stack",
-    "version": "0.0.1",
+    "version": "0.0.1-rc.1",
     "description": "DeFi Stack Environment",
     "main": "lib/src/index.js",
     "license": "MIT",
@@ -25,9 +25,12 @@
         "abis_kyber": "./artifacts/kyber/@(KyberNetworkCrystal|KyberGenesisToken|KyberReserve|KyberNetworkProxy|ConversionRates|SanityRates|FeeBurner|WhiteList|KyberNetwork|ExpectedRate).json",
         "abi_gen_args": "--template ./contract_templates/contract.handlebars --partials ./contract_templates/partials/**/*.handlebars --backend ethers"
     },
+    "dependencies": {
+        "@0x/order-utils": "^2.0.1",
+        "@0x/base-contract": "^3.0.3"
+    },
     "devDependencies": {
         "@0x/abi-gen": "^1.0.15",
-        "@0x/base-contract": "^3.0.3",
         "@0x/dev-utils": "^1.0.14",
         "@0x/order-utils": "^2.0.1",
         "@0x/tslint-config": "^1.0.7",
