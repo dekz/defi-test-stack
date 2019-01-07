@@ -4,12 +4,13 @@
 
 Included projects:
 
--   Kyber
--   0x
+-   [0x](https://0x.org)
+-   [Kyber](https://kyber.network/)
+-   [Dharma](https://dharma.io/)
 
 This project aims to build an interoperable environment for the projects in the DeFi stack. A full stack can be deployed to Ganache or a Testnet/private network.
 
-Utility tokens aim to be shared over multiple projects. So the ZRX token deployed by 0x can be traded with a Kyber reserve manager.
+Utility tokens aim to be shared over multiple projects. So the ZRX token deployed by 0x can be traded with a Kyber reserve manager and offered in a loan in Dharma.
 
 ### Install
 
@@ -101,6 +102,19 @@ As a result of running the deployment migrations you will receive a list of depl
     "feeBurner": "0xb69e673309512a9d726f87304c6984054f87a93b",
     "reserve": "0x131855dda0aaff096f6854854c55a4debf61077a",
     "sanityRates": "0x8d61158a366019ac78db4149d75fff9dda51160d"
+  },
+  "dharma": {
+    "collateralizer": "0xc7124963ab16c33e5bf421d4c0090116622b3074",
+    "simpleInterestTermsContract": "0x7209185959d7227fb77274e1e88151d7c4c368d3",
+    "debtToken": "0xc1be2c0bb387aa13d5019a9c518e8bc93cb53360",
+    "debtKernel": "0x10a736a7b223f1fe1050264249d1abb975741e75",
+    "debtRegistry": "0xdff540fe764855d3175dcfae9d91ae8aee5c6d6f",
+    "contractRegistry": "0xc6b0d3c45a6b5092808196cb00df5c357d55e1d5",
+    "permissionLib": "0x5315e44798395d4a952530d131249fe00f554565",
+    "tokenTransferProxy": "0xda54ecf5a234d6cd85ce93a955860834aca75878",
+    "repaymentRouter": "0x33def1aa867be09809f3a01ce41d5ec1888846c9",
+    "collateralizedSimpleInterestTermsContract": "0x3f16ca81691dab9184cb4606c361d73c4fd2510a",
+    "tokenRegistry": "0xb125995f5a4766c451cd8c34c4f5cac89b724571"
   }
 }
 ```

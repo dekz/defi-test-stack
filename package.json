@@ -10,10 +10,11 @@
         "ci": "yarn clean && yarn generate_contract_wrappers && yarn build && yarn test",
         "clean": "shx rm -rf defi_snapshot lib src/**/generated-wrappers/* *.zip",
         "ganache-cli": "cross-env mkdir -p defi_snapshot && ganache-cli --gasLimit 10000000 --db defi_snapshot --noVMErrorsOnRPCResponse -p 8545 --networkId 50 -m \"concert load couple harbor equip island argue ramp clarify fence smart topic\"",
-        "generate_contract_wrappers": "yarn wrappers:global && yarn wrappers:0x && yarn wrappers:kyber",
+        "generate_contract_wrappers": "yarn wrappers:global && yarn wrappers:0x && yarn wrappers:kyber && yarn wrappers:dharma",
         "wrappers:global": "abi-gen --abis ${npm_package_config_abis_global} ${npm_package_config_abi_gen_args} --output src/migrations/global/generated-wrappers",
         "wrappers:0x": "abi-gen --abis ${npm_package_config_abis_0x} ${npm_package_config_abi_gen_args} --output src/migrations/zeroEx/generated-wrappers",
         "wrappers:kyber": "abi-gen --abis ${npm_package_config_abis_kyber} ${npm_package_config_abi_gen_args} --output src/migrations/kyber/generated-wrappers",
+        "wrappers:dharma": "abi-gen --abis ${npm_package_config_abis_dharma} ${npm_package_config_abi_gen_args} --output src/migrations/dharma/generated-wrappers",
         "trim_artifacts": "for i in $(ls artifacts/**/*.json); do TJQ=$(cat $i | jq -r --unbuffered 'del(.networks, .ast, .legacyAST, .source, .sourceMap, .deployedSourceMap)') && echo ${TJQ} > $i; done",
         "run_mocha": "mocha --require source-map-support/register --require make-promises-safe 'lib/test/**/*.js' --timeout 100000 --bail --exit",
         "test": "yarn run_mocha",
@@ -23,12 +24,14 @@
         "abis_global": "./node_modules/@0x/contract-artifacts/artifacts/@(DummyERC20Token|DummyERC721Token|WETH9).json",
         "abis_0x": "./node_modules/@0x/contract-artifacts/artifacts/@(ERC20Proxy|ERC721Proxy|Exchange|Forwarder|OrderValidator).json",
         "abis_kyber": "./artifacts/kyber/@(KyberNetworkCrystal|KyberGenesisToken|KyberReserve|KyberNetworkProxy|ConversionRates|SanityRates|FeeBurner|WhiteList|KyberNetwork|ExpectedRate).json",
+        "abis_dharma": "./node_modules/@dharmaprotocol/contracts/artifacts/json/@(DebtKernel|DebtToken|DebtRegistry|TokenTransferProxy|DharmaMultiSigWallet|RepaymentRouter|TokenRegistry|SimpleInterestTermsContract|CollateralizedSimpleInterestTermsContract|Collateralizer|PermissionsLib|ContractRegistry).json",
         "abi_gen_args": "--template ./contract_templates/contract.handlebars --partials ./contract_templates/partials/**/*.handlebars --backend ethers"
     },
     "dependencies": {
         "@0x/base-contract": "^3.0.3",
         "@0x/contract-artifacts": "^1.1.2",
-        "@0x/order-utils": "^3.0.1"
+        "@0x/order-utils": "^3.0.1",
+        "@dharmaprotocol/contracts": "^0.1.24"
     },
     "devDependencies": {
         "@0x/abi-gen": "^1.0.15",
@@ -37,6 +40,7 @@
         "@0x/typescript-typings": "^3.0.4",
         "@0x/utils": "^2.0.4",
         "@0x/web3-wrapper": "^3.1.1",
+        "@dharmaprotocol/dharma.js": "^0.1.76",
         "@types/lodash": "^4.14.118",
         "@types/mocha": "^5.2.5",
         "chai": "^4.2.0",

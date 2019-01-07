@@ -464,15 +464,6 @@ export async function runMigrationsAsync(
             feeBurner: feeBurner.address,
             reserve: reserve.address,
             sanityRates: sanityRates.address,
-            accounts: {
-                admin,
-                operator,
-                alerter,
-                reserveWallet,
-                taxWallet,
-                aliceWallet,
-                bobWallet,
-            },
         },
     };
 }
