@@ -152,6 +152,16 @@
     ethereum-types "^1.1.2"
     popper.js "1.14.3"
 
+"@0x/typescript-typings@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@0x/typescript-typings/-/typescript-typings-4.0.0.tgz#f1d484df4995065bd75a334190149437b3a63603"
+  dependencies:
+    "@types/bn.js" "^4.11.0"
+    "@types/react" "*"
+    bignumber.js "~8.0.2"
+    ethereum-types "^2.0.0"
+    popper.js "1.14.3"
+
 "@0x/utils@^2.0.4", "@0x/utils@^2.0.6":
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/@0x/utils/-/utils-2.0.6.tgz#c9484b6ce50dfbdb58b4b820d4ec5a356b78ba18"
@@ -946,6 +956,10 @@ bignumber.js@7.2.1:
 bignumber.js@~4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-4.1.0.tgz#db6f14067c140bd46624815a7916c92d9b6c24b1"
+
+bignumber.js@~8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-8.0.2.tgz#d8c4e1874359573b1ef03011a2d861214aeef137"
 
 bindings@^1.2.1, bindings@^1.3.0:
   version "1.3.1"
@@ -1975,6 +1989,13 @@ ethereum-types@^1.1.2:
   dependencies:
     "@types/node" "*"
     bignumber.js "~4.1.0"
+
+ethereum-types@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ethereum-types/-/ethereum-types-2.0.0.tgz#373f9fc1849bc8969465da3e5743f33bea78ffaf"
+  dependencies:
+    "@types/node" "*"
+    bignumber.js "~8.0.2"
 
 ethereumjs-abi@0.6.5:
   version "0.6.5"
