@@ -6117,8 +6117,8 @@ typedoc-plugin-markdown@^1.0.14:
     turndown "^5.0.1"
 
 typescript@^3.0.1:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.1.6.tgz#b6543a83cfc8c2befb3f4c8fba6896f5b0c9be68"
+  version "3.3.4000"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.3.4000.tgz#76b0f89cfdbf97827e1112d64f283f1151d6adf0"
 
 typewise-core@^1.2, typewise-core@^1.2.0:
   version "1.2.0"
