@@ -39,7 +39,7 @@
         "@0x/tslint-config": "^1.0.7",
         "@0x/typescript-typings": "^3.0.4",
         "@0x/utils": "^2.0.4",
-        "@0x/web3-wrapper": "^3.1.1",
+        "@0x/web3-wrapper": "^6.0.7",
         "@dharmaprotocol/dharma.js": "^0.1.76",
         "@types/lodash": "^4.14.118",
         "@types/mocha": "^5.2.5",
