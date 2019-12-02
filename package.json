@@ -28,7 +28,7 @@
         "abi_gen_args": "--template ./contract_templates/contract.handlebars --partials ./contract_templates/partials/**/*.handlebars --backend ethers"
     },
     "dependencies": {
-        "@0x/base-contract": "^3.0.3",
+        "@0x/base-contract": "^6.0.0",
         "@0x/contract-artifacts": "^1.1.2",
         "@0x/order-utils": "^3.0.1",
         "@dharmaprotocol/contracts": "^0.1.24"
