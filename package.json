@@ -50,7 +50,7 @@
         "dirty-chai": "^2.0.1",
         "ethereum-types": "^1.1.2",
         "ethers": "^4.0.10",
-        "ganache-cli": "6.1.8",
+        "ganache-cli": "6.8.1",
         "lodash": "^4.17.11",
         "make-promises-safe": "^3.0.0",
         "mocha": "^5.2.0",
