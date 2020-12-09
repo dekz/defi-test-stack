@@ -30,7 +30,7 @@
     "dependencies": {
         "@0x/base-contract": "^3.0.3",
         "@0x/contract-artifacts": "^1.1.2",
-        "@0x/order-utils": "^3.0.1",
+        "@0x/order-utils": "^10.4.10",
         "@dharmaprotocol/contracts": "^0.1.24"
     },
     "devDependencies": {
